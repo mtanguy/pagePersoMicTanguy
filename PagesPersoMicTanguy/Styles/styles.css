@@ -1,0 +1,134 @@
+@CHARSET "UTF-8";
+
+#frame {
+	text-align: center;
+	display: inline-block;
+	width: 230px;
+	height: 300px;
+	text-align: center;
+}
+
+#prevSlide,#nextSlide {
+	width: 30px;
+	height: 50px;
+	position: absolute;
+	top: 150px;
+	cursor: pointer;
+}
+
+#prevSlide {
+	left: 0;
+	background-image: url("/Images/previous.jpg");
+}
+
+#nextSlide {
+	left: 530px;
+	background-image: url("/Images/next.jpg");
+}
+
+#pic_box {
+	
+	
+	width : 500px;
+	height: 230px;
+	text-align: center;
+	overflow:hidden;
+	background-color:red;
+}
+
+#tabs-1 {
+	width: auto;
+	height: 400px;
+}
+
+#tabs-2 #accordion {
+	width: auto;
+	height: 100%;
+}
+
+img {
+	display: inline;
+}
+
+#telecharger1 {
+	
+	/*background-image: url('/Images/slider.png');*/
+	background-image:url('/Images/telechargement1.jpeg');
+	/*background-color:#cccccc;*/
+	background-repeat: no-repeat;
+	width: 225px;
+	height: 225px;
+	display: inline-block;
+	left:30px;
+}
+
+#telecharger2 {
+	background-image: url('/Images/telechargement2.jpeg');
+	/*background-color:#cccccc;*/
+	background-repeat: no-repeat;
+	width: 225px;
+	height: 225px;
+	display: inline-block;
+	left:255px;
+}
+
+#telecharger3 {
+	background-image: url('/Images/telechargement3.jpeg');
+	/*background-color:#cccccc;*/
+	background-repeat: no-repeat;
+	width: 225px;
+	height: 225px;
+	display: inline-block;
+	left:480px;
+}
+
+#telecharger4 {
+	background-image: url('/Images/telechargement4.jpeg');
+	/*background-color:#cccccc;*/
+	background-repeat: no-repeat;
+	width: 225px;
+	height: 225px;
+	display: inline-block;
+	left:705px;
+}
+
+#telecharger5 {
+	background-image: url('/Images/telechargement5.jpeg');
+	/*background-color:#cccccc;*/
+	background-repeat: no-repeat;
+	width: 225px;
+	height: 225px;
+	display: inline-block;
+	left:930px;
+}
+
+#telecharger6 {
+	background-image: url('/Images/telechargement6.jpeg');
+	/*background-color:#cccccc;*/
+	background-repeat: no-repeat;
+	width: 225px;
+	height: 225px;
+	display: inline-block;
+	left:1155px;
+}
+
+#telecharger7 {
+	background-image: url('/Images/telechargement7.jpeg');
+	/*background-color:#cccccc;*/
+	background-repeat: no-repeat;
+	width: 225px;
+	height: 225px;
+	display: inline-block;
+	left:1350px;
+}
+
+.slide_animate {
+	position: absolute;
+	overflow:hidden;
+}
+
+/* body
+{
+background-image:url('/Images/telechargement1.jpeg');
+background-color:#cccccc;
+}*/
