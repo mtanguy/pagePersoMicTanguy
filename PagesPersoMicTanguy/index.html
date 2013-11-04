@@ -15,7 +15,40 @@
 		$("#accordion").accordion();
 	});
 </script>
+  <script src="http://mrdoob.github.com/three.js/build/three.min.js"></script>
+  <script type="text/javascript">
+  <!-- C'est ici que nous utiliserons Three.js -->
+  var renderer, scene, camera, mesh;
 
+  init();
+
+  function init(){
+      // on initialise le moteur de rendu
+      renderer = new THREE.WebGLRenderer();
+
+      // si WebGL ne fonctionne pas sur votre navigateur vous pouvez utiliser le moteur de rendu Canvas à la place
+      // renderer = new THREE.CanvasRenderer();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      document.getElementById('container_3D_animate').appendChild(renderer.domElement);
+
+      // on initialise la scène
+      scene = new THREE.Scene();
+
+      // on initialise la camera que l’on place ensuite sur la scène
+      camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 10000 );
+      camera.position.set(0, 0, 1000);
+      scene.add(camera);
+      
+      // on créé un  cube au quel on définie un matériau puis on l’ajoute à la scène 
+      var geometry = new THREE.CubeGeometry( 200, 200, 200 );
+      var material = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
+      mesh = new THREE.Mesh( geometry, material );
+      scene.add( mesh );
+
+      // on effectue le rendu de la scène
+      renderer.render( scene, camera );
+  }
+  </script>
 </head>
 <body>
 
@@ -29,19 +62,12 @@
 		</ul>
 
 		<div id="tabs-1">
-			<div id="prevSlide"></div>
-			<div id="pic_box">
-
-				<div id="telecharger1" class="slide_animate"></div>
-				<div id="telecharger2" class='slide_animate'></div>
-				<div id="telecharger3" class='slide_animate'></div>
-				<div id="telecharger4" class='slide_animate'></div>
-				<div id="telecharger5" class='slide_animate'></div>
-				<div id="telecharger6" class='slide_animate'></div>
-				<div id="telecharger7" class='slide_animate'></div>
-			</div>
-			<div id="nextSlide"></div>
+			
+			<div id="container_3D_animate"></div>
 		</div>
+		  
+
+
 		<div id="tabs-2">
 			<div id="accordion">
 				<h3>Section 1</h3>
