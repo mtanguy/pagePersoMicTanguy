@@ -1,14 +1,16 @@
 $(function() {
-	var nbPicture = $('#pic_box > *').length, nPix = 0, stepx = $(
-	'#pic_box :first-child').width();
+	
+	var nbPicture = $('#pic_box > *').length ;//nb total d'image dans le conteneur  
+	
+	var stepx = $('#pic_box').width(); // pas definie par la largeur du conteneur d'images a slider
 
-
-
+	var nPix = 0, clickbtnnext=0, clickbtnprevious=0;
+alert(stepx);
 
 $("#prevSlide").click(function() {
 if(nPix<nbPicture){
 	nPix += 1;
-
+	clickbtnprevious=nPix;
 	$(".slide_animate").animate({
 		left : '+='+stepx+'px'
 		
@@ -17,7 +19,7 @@ if(nPix<nbPicture){
 	nPix = 0;
 
 }
-alert("click suivant: "+ nPix);
+
 });
 
 
