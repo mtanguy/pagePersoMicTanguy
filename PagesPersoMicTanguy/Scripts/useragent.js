@@ -18,5 +18,5 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
-if( isMobile.any() ) document.location.href = "http://localhost:8888/mobile_website/index.html";
-//if( isMobile.any() ) document.location.href = "http://www.mic.tanguy.free.fr/mobile_website/index.html";
+//if( isMobile.any() ) document.location.href = "http://localhost:8888/mobile_website/index.html";
+if( isMobile.any() ) document.location.href = "http://mic.tanguy.free.fr/mobile_website/index.html";
