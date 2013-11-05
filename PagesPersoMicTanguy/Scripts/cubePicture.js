@@ -2,7 +2,7 @@
 
  
 
-  function init(){
+  function initCubePicture(){
       // on initialise le moteur de rendu
       renderer = new THREE.WebGLRenderer();
 
@@ -28,3 +28,12 @@
       // on effectue le rendu de la scène
       renderer.render( scene, camera );
   }
+  function animateCubePicture(){
+	    // on appel la fonction animate() récursivement à chaque frame
+	    requestAnimationFrame( animateCubePicture );
+	    // on fait tourner le cube sur ses axes x et y
+	    mesh.rotation.x += 0.01;
+	    mesh.rotation.y += 0.02;
+	    // on effectue le rendu de la scène
+	    renderer.render( scene, camera );
+	}

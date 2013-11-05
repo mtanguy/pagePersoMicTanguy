@@ -7,7 +7,9 @@
 <script src="/Scripts/frameWork/jquery-1.10.2.js"></script>
 <script src="/Scripts/frameWork/jquery-ui.js"></script>
 <script src="/Scripts/frameWork/three.min.js"></script>
-<script src="/Scripts/slideAnimate.js"></script>
+<script src="/Scripts/cubePicture.js"></script>
+
+
 <link rel="stylesheet" href="/resources/demos/style.css" />
 <link rel="stylesheet" href="/Styles/styles.css" />
 <script>
@@ -16,7 +18,7 @@
 		$("#accordion").accordion();
 	});
 </script>
-  <script src="http://mrdoob.github.com/three.js/build/three.min.js"></script>
+
  
 </head>
 <body>
@@ -31,7 +33,7 @@
 		</ul>
 
 		<div id="tabs-1">
-			
+			<h1>Bienvenue sur mon espace dédié aux mathémtiques</h1>
 			<div id="container_3D_animate"></div>
 		</div>
 		  
@@ -40,7 +42,7 @@
 		<div id="tabs-2">
 			<div id="accordion">
 				<h3>Section 1</h3>
-				<div>
+				<div class="accordion"> 
 					<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget,
 						quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida
 						in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros.
@@ -48,34 +50,17 @@
 						a velit eu ante scelerisque vulputate.</p>
 				</div>
 				<h3>Section 2</h3>
-				<div>
-					<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum
-						sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet,
-						mauris turpis porttitor velit, faucibus interdum tellus libero ac
-						justo. Vivamus non quam. In suscipit faucibus urna.</p>
+				<div class="accordion">
+					<p>Sed non urna. In suscipit faucibus urna.</p>
 				</div>
 				<h3>Section 3</h3>
-				<div>
+				<div class="accordion">
 					<p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.
-						Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in
-						pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac
-						felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam
-						nisi, eu iaculis leo purus venenatis dui.</p>
-					<ul>
-						<li>List item one</li>
-						<li>List item two</li>
-						<li>List item three</li>
-					</ul>
+						</p>
 				</div>
 				<h3>Section 4</h3>
-				<div>
-					<p>Cras dictum. Pellentesque habitant morbi tristique senectus
-						et netus et malesuada fames ac turpis egestas. Vestibulum ante
-						ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-						Curae; Aenean lacinia mauris vel est.</p>
-					<p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim
-						consequat lectus. Class aptent taciti sociosqu ad litora torquent
-						per conubia nostra, per inceptos himenaeos.</p>
+				<div class="accordion">
+					<p>Cras dictum. Pellentesque </p>
 				</div>
 			</div>
 		</div>
@@ -127,39 +112,13 @@
 		</div>
 
 	</div>
-
+ 
+ <script type="text/javascript"></script>
  <script type="text/javascript">
   <!-- C'est ici que nous utiliserons Three.js -->
-  var renderer, scene, camera, mesh;
-
-  init();
-
-  function init(){
-      // on initialise le moteur de rendu
-      renderer = new THREE.WebGLRenderer();
-
-      // si WebGL ne fonctionne pas sur votre navigateur vous pouvez utiliser le moteur de rendu Canvas à la place
-      // renderer = new THREE.CanvasRenderer();
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      document.getElementById('container_3D_animate').appendChild(renderer.domElement);
-
-      // on initialise la scène
-      scene = new THREE.Scene();
-
-      // on initialise la camera que l’on place ensuite sur la scène
-      camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 10000 );
-      camera.position.set(0, 0, 1000);
-      scene.add(camera);
-      
-      // on créé un  cube au quel on définie un matériau puis on l’ajoute à la scène 
-      var geometry = new THREE.CubeGeometry( 200, 200, 200 );
-      var material = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
-      mesh = new THREE.Mesh( geometry, material );
-      scene.add( mesh );
-
-      // on effectue le rendu de la scène
-      renderer.render( scene, camera );
-  }
+  initCubePicture();
+  animateCubePicture();
   </script>
+
 </body>
 </html>

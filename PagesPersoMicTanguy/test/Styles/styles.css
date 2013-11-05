@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+#telechargement1{
+	/* background-image: url('/Images/telechargement1.jpeg'); */
+	background-color: blue;
+	background-repeat: no-repeat;
+    background-position: left;
+    display: block;
+    height: 160px;
+}
+
+body
+{
+background-image:url('/Images/telechargement1.jpeg');
+background-color:#cccccc;
+}

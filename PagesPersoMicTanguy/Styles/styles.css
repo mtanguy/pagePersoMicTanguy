@@ -41,12 +41,12 @@
 
 #tabs-1 {
 	width: auto;
-	height: 400px;
+	height: auto;
 }
 
 #tabs-2 #accordion {
 	width: auto;
-	height: 100%;
+	height: auto;
 }
 
 
@@ -126,7 +126,10 @@
 	position: absolute;
 	overflow:hidden;
 }
-
+.accordion{
+	width: auto;
+	height: auto;
+}
 /* body
 {
 background-image:url('/Images/telechargement1.jpeg');
