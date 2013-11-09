@@ -9,7 +9,7 @@
 <script src="/Scripts/frameWork/jquery-ui.js"></script>
 <script src="/Scripts/frameWork/three.min.js"></script>
 <script src="/Scripts/cubePicture.js"></script>
-
+<script src="/Scripts/MathsTables.js"></script>
 
 <link rel="stylesheet" href="/resources/demos/style.css" />
 <link rel="stylesheet" href="/Styles/styles.css" />
@@ -41,29 +41,39 @@
 
 
 		<div id="tabs-2">
-			<div id="accordion">
-				<h3>Section 1</h3>
-				<div class="accordion"> 
-					<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget,
-						quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida
-						in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros.
-						Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum
-						a velit eu ante scelerisque vulputate.</p>
-				</div>
-				<h3>Section 2</h3>
-				<div class="accordion">
-					<p>Sed non urna. In suscipit faucibus urna.</p>
-				</div>
-				<h3>Section 3</h3>
-				<div class="accordion">
-					<p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.
-						</p>
-				</div>
-				<h3>Section 4</h3>
-				<div class="accordion">
-					<p>Cras dictum. Pellentesque </p>
-				</div>
+		
+		<div id="tableauAddition">
+				<table border=1>
+					<thead>
+						<tr>
+							<th id="tableauAdditionName" colspan=10></th>
+						</tr>
+					</thead>
+
+					<tbody>
+
+
+					</tbody>
+				</table>
+
 			</div>
+			<script type="text/javascript">
+			var tableauAddition =new MathsTables("addition","terme1","+");
+				tableauAddition.getName();
+			//alert(tableauAddition.name);
+		$("#tableauAdditionName").html("Le titre du tableau"+tableauAddition.name);
+		
+for(i=10; i>0; i--){
+		$("tbody").after("<tr id=table"+i+"></tr>");
+			//"<td>"+January+"</td>"
+			for(j=0; j<10; j++){
+			somme=i+j;	
+			$("#table"+j).after("<td>"+somme+"</td>");
+			}
+			
+		}
+				</script>
+			
 		</div>
 		<div id="tabs-3">
 			<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse
