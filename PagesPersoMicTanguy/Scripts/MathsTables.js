@@ -8,8 +8,8 @@ function MathsTables(myName,myTerme,myOperateur){
 	 function getName(){
 		alert(this.name);
 	}
-	 function tHead(){
-		 var tHeadStr="<thead><tr><th id=\"tableauAdditionName\" colspan=10>"+this.name+"</th></tr></thead>";
+	 function tHead(colSpan){
+		 var tHeadStr="<thead><tr><th id=\"tableauAdditionName\" colspan="+colSpan +">"+this.name+"</th></tr></thead>";
 		 return tHeadStr;
 	 }
 	 function tBody(){
@@ -30,7 +30,7 @@ function MathsTables(myName,myTerme,myOperateur){
 		 		}
 		 
 		 		tBodyStr="<tbody id=tbodyBox"+this.name+">"+tBodyStr+"</tbody>";
-		 		alert("** "+tBodyStr);
+		 		
 		 		return tBodyStr;
 	 }
 }
