@@ -37,41 +37,14 @@
 
 		<div id="tabs-2">
 		
-		<div id="tableauAddition">
-				<table border=1>
-					<thead>
-						<tr>
-							<th id="tableauAdditionName" colspan=10></th>
-						</tr>
-					</thead>
-
-					<tbody id="tbodyBox">
+		<div >
+				<table border=1 id="tableauAddition"></table>
+					
+					
 
 
-					</tbody>
-				</table>
 
 			</div>
-			<script type="text/javascript">
-			var tableauAddition =new MathsTables("addition","terme1","+");
-				tableauAddition.getName();
-			//alert(tableauAddition.name);
-		$("#tableauAdditionName").html("Le titre du tableau"+tableauAddition.name);
-var sommeStr="";		
-for(i=0; i<11; i++){
-		
-			
-			for(j=0; j<11; j++){
-			somme=i+j;
-			sommeStr=sommeStr+"<td>"+somme+"</td>";
-			
-			}
-			sommeStr="<tr id=table"+i+"_"+j+">"+sommeStr+"</tr>";	
-		}
-		sommeStr="<tbody id=tbodyBox"+tableauAddition.name+">"+sommeStr+"</tbody>";
-		alert("** "+sommeStr);
-		$("tbody").html(sommeStr);
-				</script>
 			
 		</div>
 		<div id="tabs-3">
